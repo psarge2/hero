@@ -1,8 +1,15 @@
-<div class="card border-success mb-3" style="max-width: 18rem;">
+<div class="card border-success mb-3" style="max-width: 50rem;">
   <div class="card-header bg-transparent border-success"><%= link_to 'Click Here To Generate A New Superhero', root_path %></div>
   <div class="card-body text-success">
     <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">
+    Superhero Name <%= @hero_name%> <br> 
+    Super Power <%= @hero_power %></p>
+    <p class="card-text">
+    Your Undercover Day Job is:<br> <%= @corp_title%> <br> 
+    Your Corporate Super Power is: <br>
+    <%= @corp_power %></p>
+    <img src="<%= @avatar %>">
   </div>
   <div class="card-footer bg-transparent border-success"><%= link_to 'Create A Whole Superhero Team', home_team_path %></div>
 </div>

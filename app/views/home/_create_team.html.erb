@@ -3,6 +3,7 @@
         <%= form_with url: "/home/team", method: :post do |form| %>
             <br>
           <%= select_tag(:team_number, options_for_select([
+              ['Select a number', 0],
               ['1',1],
               ['2',2],
               ['3',3],

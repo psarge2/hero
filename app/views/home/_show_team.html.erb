@@ -1,0 +1,25 @@
+<% @team_number.times do %>
+
+<div class="row">
+      <div class="col-md-4">
+        <img src="<%= @avatar %>">
+      </div>
+      <div class="col-md-8">
+        <h3 class="card-title">Superhero Name: <br><%= @hero_name%> </h3>
+        <h3 class="card-title">Super Power: <br><%= @hero_power %></h3>
+        <br>
+        <h4 class="card-text">
+        Your Undercover Day Job is:<br> <%= @corp_title%>
+        </h4>
+        <h4 class="card-text">
+        Your Corporate Super Power is: <br><%= @corp_power %>
+        </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+      <div>
+    </div>
+
+<% end %>

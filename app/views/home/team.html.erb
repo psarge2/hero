@@ -1,8 +1,16 @@
+
+
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success"><%= link_to 'Click Here To Generate A New Superhero', root_path %></div>
-  <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card-header bg-transparent border-success"><% if @team_number > 0 %> Your Superhero Team... <% else %>How Many Team Members Do You Want <% end %><%=@team_number%></div>
+  <div class="card-body">
+    
+    <% if @team_number > 0 %>
+      <%= render 'home/show_team'%>
+    <% else %>
+      <%= render 'home/create_team' %>
+    <% end %>
+
+    </div>
   </div>
   <div class="card-footer bg-transparent border-success"><%= link_to 'Create A Whole Superhero Team', home_team_path %></div>
 </div>
